@@ -1,0 +1,132 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgba(57, 47, 48, 0.99);
+}
+
+.containerParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 6rem auto;
+  margin-bottom: 3rem;
+}
+
+.containerChild {
+  max-width: 400px;
+  width: 100%;
+}
+
+.calculator {
+  border-radius: 2rem;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.calculator .display {
+  background: rgba(2, 92, 88, 0.99);
+  padding: 1rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.display .calculatorDisplay {
+  width: 100%;
+  border: 0px;
+  background: #98aaa0;
+  border-radius: 0.725rem;
+  padding: 1rem;
+  box-shadow: inset 2px 3px 5px 0px rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+.calculatorDisplay output {
+  display: block;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+output#userInput {
+  font-size: 2.325rem;
+  font-weight: 400;
+  text-align: right;
+  color: #0b0b0b;
+}
+
+output#result {
+  font-size: 2.625rem;
+  font-weight: 600;
+  text-align: right;
+  color: #000000;
+}
+
+.calculator .allButtons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  grid-gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(2, 92, 88, 0.99);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.allButtons button {
+  font-size: 1.625rem;
+  padding: 1rem 0;
+  font-weight: 700;
+  background: #439e9f;
+  border: 0px solid transparent;
+  outline: none;
+  text-decoration: none;
+  border-radius: 10%;
+  box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  color: #dfdfdf;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+button.equals {
+  grid-column: 3 / 5;
+  border-radius: 10%;
+}
+
+button.equals:hover {
+  background: rgba(160, 84, 2, 0.59);
+  color: var(--white);
+  transform: translateY(-0.2rem);
+}
+
+button.digits:hover,
+button.decimal:hover {
+  background: #bdbdbd;
+  color: #212121;
+  transform: translateY(-0.2rem);
+}
+
+button.operators:hover {
+  background: mediumturquoise;
+  color: #000;
+  transform: translateY(-0.2rem);
+}
+
+button.allClear:hover,
+button.clear:hover {
+  background: lightcoral;
+  color: #000;
+  transform: translateY(-0.2rem);
+}
+
+button.digits:active,
+button.operators:active,
+button.decimal:active,
+button.allclear:active,
+button.clear:active,
+button.equals:active {
+  transform: translateY(0rem);
+}
